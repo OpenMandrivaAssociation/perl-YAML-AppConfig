@@ -1,7 +1,7 @@
 %define module	YAML-AppConfig
 %define name	perl-%{module}
 %define version	0.16
-%define release	%mkrel 6
+%define release	%mkrel 7
 
 Name: 		%{name}
 Version: 	%{version}
@@ -15,6 +15,7 @@ Source:         http://www.cpan.org/modules/by-module/WWW/%{module}-%{version}.t
 BuildRequires:	perl-devel
 %endif
 BuildRequires:	perl(YAML)
+Requires:	    perl(YAML)
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
