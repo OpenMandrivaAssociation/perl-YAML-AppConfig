@@ -1,7 +1,7 @@
 %define module	YAML-AppConfig
 %define name	perl-%{module}
 %define version	0.16
-%define release	%mkrel 7
+%define release	%mkrel 8
 
 Name: 		%{name}
 Version: 	%{version}
@@ -11,11 +11,8 @@ License: 	GPL or Artistic
 Group: 		Development/Perl
 Url:            http://search.cpan.org/dist/%{module}
 Source:         http://www.cpan.org/modules/by-module/WWW/%{module}-%{version}.tar.bz2
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
-BuildRequires:	perl(YAML)
-Requires:	    perl(YAML)
+BuildRequires:	perl-YAML-parser
+Requires:	    perl-YAML-parser
 BuildArch:      noarch
 BuildRoot:      %{_tmppath}/%{name}-%{version}
 
