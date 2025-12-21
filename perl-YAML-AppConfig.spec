@@ -12,6 +12,7 @@ Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
 Patch:		YAML-AppConfig-0.16-fix-warning.patch
 
+BuildRequires:	make
 BuildRequires:	perl-devel
 BuildRequires:	perl-YAML-parser
 Requires:	perl-YAML-parser
