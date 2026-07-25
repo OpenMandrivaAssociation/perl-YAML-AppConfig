@@ -1,15 +1,15 @@
 %define upstream_name	 YAML-AppConfig
-%define upstream_version 0.16
+%define upstream_version 0.19
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	6
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	Manage configuration files with YAML and variable reference
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://github.com/Xaerxess/YAML-AppConfig
+Source0:	https://cpan.metacpan.org/authors/id/X/XA/XAERXESS/YAML-AppConfig-%{upstream_version}.tar.gz
 Patch:		YAML-AppConfig-0.16-fix-warning.patch
 
 BuildRequires:	make
