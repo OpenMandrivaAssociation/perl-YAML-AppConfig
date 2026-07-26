@@ -1,15 +1,13 @@
 %define upstream_name	 YAML-AppConfig
-%define upstream_version 0.19
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.19
+Release:	2
 
 Summary:	Manage configuration files with YAML and variable reference
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/Xaerxess/YAML-AppConfig
-Source0:	https://cpan.metacpan.org/authors/id/X/XA/XAERXESS/YAML-AppConfig-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/X/XA/XAERXESS/YAML-AppConfig-%{version}.tar.gz
 Patch:		YAML-AppConfig-0.16-fix-warning.patch
 
 BuildRequires:	make
@@ -24,7 +22,7 @@ allow more flexiable configuration files.
 
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 %patch -p1
 
 %build
@@ -53,8 +51,7 @@ make test
 
 * Tue Jul 28 2009 Jérôme Quelin <jquelin@mandriva.org> 0.160.0-1mdv2010.0
 + Revision: 401809
-- rebuild using %%perl_convert_version
-- fixed license field
+- rebuild using %0.19 fixed license field
 
 * Sun Jan 04 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.16-8mdv2009.1
 + Revision: 324627
